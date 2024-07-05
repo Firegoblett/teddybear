@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>測驗開始</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #startButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImage" src="images/start.jpg" alt="開始圖片" width="600">
+    <button id="startButton">開始測驗</button>
+
+    <script>
+        const images = [
+            'images/image1.jpg',
+            'images/image2.jpg',
+            'images/image3.jpg',
+            // ... 其他圖片路徑
+            'images/image20.jpg'
+        ];
+
+        document.getElementById('startButton').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('mainImage').src = images[randomIndex];
+        });
+    </script>
+</body>
+</html>
